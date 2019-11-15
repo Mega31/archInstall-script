@@ -3,7 +3,7 @@
 #!/bin/bash
 
 echo "Arch Installation"
-pacstrap /mnt base linux linux-lts linux-firmware i3  nvidia bbswitch codeblocks intellij-idea-community-edition  rofi thunar networkmanager ntfs-3g lightdm lightdm-webkit2-greeter firefox chromium telegram-desktop git sudo network-manager-applet cpupower lib32-mesa xf86-video-intel acpi wpa_supplicant  dialog  xorg xorg-server-utils  xorg-xinit   jdk11-openjdk 	 gparted lxappearance feh neofetch polkit-gnome git
+pacstrap /mnt base linux linux-lts linux-firmware i3  nvidia bbswitch codeblocks intellij-idea-community-edition  rofi thunar networkmanager ntfs-3g lightdm lightdm-webkit2-greeter firefox chromium telegram-desktop git sudo network-manager-applet cpupower  xf86-video-intel acpi wpa_supplicant  dialog  xorg jdk11-openjdk gparted lxappearance feh neofetch polkit-gnome git
 
 echo "genfstab"
 
