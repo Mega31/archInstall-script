@@ -1,15 +1,15 @@
 
 
 #!/bin/bash
-echo"Arch Installation"
 
+echo "Arch Installation"
 pacstrap /mnt base linux linux-lts linux-firmware i3  nvidia bbswitch codeblocks intellij-idea-community-edition  rofi thunar networkmanager ntfs-3g lightdm lightdm-webkit2-greeter firefox chromium telegram-desktop git sudo network-manager-applet cpupower lib32-mesa xf86-video-intel acpi wpa_supplicant  dialog  xorg xorg-server-utils  xorg-xinit   jdk11-openjdk 	 gparted lxappearance feh neofetch polkit-gnome git
 
-echo"genfstab"
+echo "genfstab"
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-echo"arch-chow root"
+echo "arch-chow root"
 
 arch-chroot /mnt 
 
@@ -26,7 +26,7 @@ locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LANG=en_US.UTF-8
 
-echo arch >> /etc/hostname
+echo "arch" >> /etc/hostname
 
 echo "127.0.0.1   localhost.localdomain   localhost" >>/etc/hosts
 echo "::1         localhost.localdomain   localhost">>/etc/hosts
@@ -67,9 +67,8 @@ read -p "enter boot partion"partion
 echo "mounting boot to efi"
 mount /dev/$partion /boot/efi
 
-echo"installing grub"
+echo "installing grub"
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub --recheck
 grub-mkconfig -o boot/grub/grub.cfg
 
-echo
 echo"Instalation finished"
